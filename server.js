@@ -24,7 +24,7 @@ app.use(express.static(distDir));
 // mongodb://heroku_8rplq1jc:4svpdmd11tchrqsqa4655bhuhg@ds215388.mlab.com:15388/heroku_8rplq1jc
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || `mongodb://localhost:27017/test`, {
+mongoose.connect(process.env.DB_URI || `mongodb://localhost:27017/test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
